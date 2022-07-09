@@ -17,6 +17,8 @@ function MyApp({ Component, pageProps }: AppProps) {
           href="/img/icon-512.png"
           type="image/x-icon"
         />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#121214" />
         <meta
           name="description"
           content="A simple project starter to work with Typescript, React, NextJs, Jest, Storybook and Styled components"
