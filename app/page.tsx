@@ -1,22 +1,21 @@
-"use client";
-
-import { Button } from "@/components/ui/button";
-import { useGetUsers } from "@/features/users/api/use-get-users";
+import { Navigation } from "@/components/navigation";
+import { HeroSection } from "@/components/hero-section";
+import { SocialProofSection } from "@/components/social-proof-section";
+import { FeaturesSection } from "@/components/features-section";
+import { TechStackSection } from "@/components/tech-stack-section";
+import { CTASection } from "@/components/cta-section";
+import { Footer } from "@/components/footer";
 
 export default function Home() {
-  const { data, isLoading } = useGetUsers();
-
-  const searchUsers = () => {
-    console.log("Buscar usuarios");
-    console.log(data);
-  };
-
   return (
-    <div className="flex justify-center items-center flex-col min-h-screen space-y-2">
-      <h1>Hello world</h1>
-      <Button onClick={searchUsers} disabled={isLoading}>
-        {isLoading ? "Loading..." : "Search Users"}
-      </Button>
+    <div className="min-h-screen">
+      <Navigation />
+      <HeroSection />
+      <SocialProofSection />
+      <FeaturesSection />
+      <TechStackSection />
+      <CTASection />
+      <Footer />
     </div>
   );
 }
