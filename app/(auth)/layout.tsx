@@ -1,4 +1,5 @@
 import { AnimatedGridPattern } from "@/components/ui/animated-grid-pattern";
+import { Toaster } from "@/components/ui/sonner";
 import { cn } from "@/lib/utils";
 
 export default function AuthLayout({
@@ -23,6 +24,7 @@ export default function AuthLayout({
       {/* Content */}
       <div className="relative z-10 w-full max-w-md px-4">
         {children}
+        <Toaster />
       </div>
     </div>
   );
