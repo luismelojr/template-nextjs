@@ -1,7 +1,7 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import { useGetUsers } from "@/features/users/api/use-get-users";
-import Image from "next/image";
 
 export default function Home() {
   const { data, isLoading } = useGetUsers();
@@ -14,9 +14,9 @@ export default function Home() {
   return (
     <div className="flex justify-center items-center flex-col min-h-screen space-y-2">
       <h1>Hello world</h1>
-      <button className="bg-red-300 py-2 px-4 rounded cursor-pointer" onClick={() => searchUsers()}>
-        Buscar Usuarios
-      </button>
+      <Button onClick={searchUsers} disabled={isLoading}>
+        {isLoading ? "Loading..." : "Search Users"}
+      </Button>
     </div>
   );
 }
