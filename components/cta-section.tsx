@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Terminal } from "lucide-react";
@@ -67,11 +68,13 @@ export function CTASection() {
             </div>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-base">
-                View on GitHub
-              </Button>
+              <Link href="/signup">
+                <Button size="lg" className="text-base">
+                  Começar agora
+                </Button>
+              </Link>
               <Button size="lg" variant="outline" className="text-base">
-                Read Documentation
+                View on GitHub
               </Button>
             </div>
           </Card>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { AnimatedGridPattern } from "@/components/ui/animated-grid-pattern";
 import { cn } from "@/lib/utils";
@@ -38,9 +39,11 @@ export function HeroSection() {
 
           {/* CTA Button */}
           <div className="flex gap-4 mt-4">
-            <Button size="lg" className="text-base">
-              Get Started
-            </Button>
+            <Link href="/signup">
+              <Button size="lg" className="text-base">
+                Começar grátis
+              </Button>
+            </Link>
             <Button size="lg" variant="outline" className="text-base">
               View on GitHub
             </Button>
